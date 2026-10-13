@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Tetris</title>
+  <link rel="stylesheet" href="teteris2.css">
+</head>
+<body>
+  <div class="tetris-container">
+    <canvas id="tetris" width="240" height="400"></canvas>
+    
+    <div class="side-panel">
+      <h1>TETRIS</h1>
+      
+      <div class="info-box">
+        <p>NEXT</p>
+        <canvas id="next-piece" width="80" height="80"></canvas>
+      </div>
+
+      <div class="info-box">
+        <p>HOLD <span id="hold-label">—</span></p>
+        <canvas id="hold-piece" width="80" height="80"></canvas>
+      </div>
+
+      <div class="info-box">
+        <p>SCORE</p>
+        <div id="score">0</div>
+      </div>
+
+      <div class="info-box">
+        <p>HIGH SCORE</p>
+        <div id="high-score">0</div>
+      </div>
+
+      <div class="info-box">
+        <p>LINES</p>
+        <div id="lines">0</div>
+      </div>
+
+      <div class="info-box">
+        <p>LEVEL</p>
+        <div id="level">1</div>
+      </div>
+
+      <button id="start-btn">Start</button>
+
+      <div class="controls-hint">
+        <p><strong>Controls:</strong></p>
+        <p>← / → : Move</p>
+        <p>↑ : Rotate</p>
+        <p>↓ : Soft Drop</p>
+        <p>Space : Hard Drop</p>
+        <p>C / Shift : Hold</p>
+        <p>P : Pause</p>
+      </div>
+
+      <div class="touch-controls" aria-label="Touch controls">
+        <button type="button" data-action="left" aria-label="Move left">←</button>
+        <button type="button" data-action="rotate" aria-label="Rotate">↻</button>
+        <button type="button" data-action="right" aria-label="Move right">→</button>
+        <button type="button" data-action="down" aria-label="Soft drop">↓</button>
+        <button type="button" data-action="hard-drop" aria-label="Hard drop">Drop</button>
+        <button type="button" data-action="hold" aria-label="Hold piece">Hold</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="teteris1.js"></script>
+</body>
+</html>
